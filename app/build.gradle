@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+
+repositories {
+    maven { url "http://dl.bintray.com/farukcankaya/maven" }
+}
+
+android {
+    compileSdkVersion versionSdk
+    buildToolsVersion "${versionBuildTools}"
+
+    defaultConfig {
+        applicationId "com.farukcankaya.audiomanagersample"
+        minSdkVersion versionMinSdk
+        targetSdkVersion versionTargetSdk
+
+        versionCode versionBuild
+        versionName "${versionName}"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':audiomanager')
+    compile 'com.farukcankaya:rtlviewpager:1.0.3'
+    androidTestCompile("com.android.support.test.espresso:espresso-core:${espresso}", {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile "com.android.support:appcompat-v7:${supportVersion}"
+    testCompile "junit:junit:${junit}"
+}

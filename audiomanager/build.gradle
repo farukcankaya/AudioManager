@@ -1,0 +1,60 @@
+apply plugin: 'com.android.library'
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'AudioManager'
+
+    publishedGroupId = 'com.farukcankaya'
+    libraryName = 'audiomanager'
+    artifact = 'audiomanager'
+
+    libraryDescription = 'Record and Play audio easy way.'
+
+    siteUrl = 'https://github.com/farukcankaya/AudioManager'
+    gitUrl = 'https://github.com/farukcankaya/AudioManager.git'
+
+    libraryVersion = "${versionName}"
+
+    developerId = 'farukcankaya'
+    developerName = 'Faruk Cankaya'
+    developerEmail = 'farukcankayaaa@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+android {
+    compileSdkVersion versionSdk
+    buildToolsVersion "${versionBuildTools}"
+
+    defaultConfig {
+        minSdkVersion versionMinSdk
+        targetSdkVersion versionTargetSdk
+        versionCode versionBuild
+        versionName "${versionName}"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile("com.android.support.test.espresso:espresso-core:${espresso}", {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile "com.android.support:appcompat-v7:${supportVersion}"
+    compile "com.android.support:cardview-v7:${supportVersion}"
+    compile "com.android.support:design:${supportVersion}"
+    testCompile "junit:junit:${junit}"
+}
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

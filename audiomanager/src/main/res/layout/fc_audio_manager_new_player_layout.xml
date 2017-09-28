@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/fc_audio_manager_new_player_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/fc_audio_manager_new_player_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:src="@drawable/fc_audio_manager_new_player_play"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/fc_audio_manager_new_player_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:src="@drawable/fc_audio_manager_new_player_stop"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/fc_audio_manager_new_player_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:src="@drawable/fc_audio_manager_new_player_record" />
+
+        <TextView
+            android:id="@+id/fc_audio_manager_new_player_record_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Ses Kaydına Başla!" />
+
+        <ProgressBar
+            android:id="@+id/fc_audio_manager_new_player_recording_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:indeterminate="true"
+            android:indeterminateOnly="true"
+            android:padding="0dp"
+            android:visibility="gone" />
+
+        <SeekBar
+            android:id="@+id/fc_audio_manager_new_player_playing_progress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:progressTint="#E75C41"
+            android:thumbTint="#E75C41"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/fc_audio_manager_new_player_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="8dp"
+            android:text="00:00"
+            android:textColor="#274B4E"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/fc_audio_manager_new_player_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:src="@drawable/fc_audio_manager_new_player_delete"
+        android:visibility="gone" />
+</LinearLayout>

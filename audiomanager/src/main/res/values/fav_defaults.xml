@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="default_fab_record_icon">@android:drawable/ic_media_play</drawable>
+    <drawable name="default_fab_stop_icon">@android:drawable/ic_media_play</drawable>
+    <color name="default_fab_color">#FFFFFF</color>
+    <string name="default_record_text">Start recording</string>
+    <dimen name="default_record_text_size">12sp</dimen>
+</resources>

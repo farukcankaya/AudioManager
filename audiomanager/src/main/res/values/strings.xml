@@ -1,0 +1,6 @@
+<resources>
+    <string name="fc_audio_manager_app_name">AudioManager</string>
+    <string name="fc_audio_manager_notification_recording">Recording...</string>
+    <string name="fc_audio_manager_notification_stop">Stop</string>
+    <string name="fc_audio_manager_notification_cancel">Cancel</string>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FloatingAudioView">
+        <attr name="favFloatingAudioViewStyle" format="reference" />
+
+        <attr name="fab_record_text" format="string" />
+        <attr name="fab_record_text_color" format="color" />
+        <attr name="fab_record_text_size" format="dimension" />
+        <attr name="fab_record_text_font" format="string" />
+        <attr name="fab_color" format="color" />
+        <attr name="fab_record_icon" format="integer" />
+        <attr name="fab_stop_icon" format="integer" />
+    </declare-styleable>
+</resources>
